@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name', 'My Wiki') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -90,13 +90,13 @@
 
             <div class="content">
                 <div class="title m-b-md" style="color:#252525;">
-                    My Test Driven <br />Development Application
+                    Test Wiki: TDD Application
                 </div>
                 <div><input type="text" id="fillThis" name="fillThis" style="border:none;font-size:20px;"/></div>
                 <div class="links">
+                    <a href="{{ route('wiki.index') }}"><button class="btn btn-primary my-primary">Wiki Home</button></a>
                     <a href="https://phpunit.de/documentation.html"><button class="btn btn-primary my-primary">PHP Unit Documentation</button></a>
                     <a href="https://laravel.com/docs/5.5/testing"><button class="btn btn-primary my-primary">Laravel Application Testing</button></a>
-                    <a href="https://laracasts.com/series/phpunit-testing-in-laravel"><button class="btn btn-primary my-primary">Testing Laravel (Laracasts)</button></a>
                     <button onClick="clickMessage()" class="btn btn-primary my-primary">Click for Test Message</button>
                     <a href="/testpage"><button class="btn btn-primary my-primary">Press</button></a>
                 </div>

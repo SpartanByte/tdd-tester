@@ -95,8 +95,6 @@
                     <a href="https://laracasts.com/series/phpunit-testing-in-laravel">Testing Laravel (Laracasts)</a>
                     <button onClick="clickMessage()" class="btn">Click for Test Message</button>
                     <a href="https://greatinsight.com"><button class="btn">Press</button></a>
-                        {{-- <a href="http://example.com">Click to Test Path</a> --}}
-                    {{-- </button> --}}
                 </div>
             </div>
         </div>

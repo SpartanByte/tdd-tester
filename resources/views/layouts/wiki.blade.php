@@ -10,8 +10,13 @@
 
     <title>{{ config('app.name', 'My Wiki') }}</title>
 
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+         <!-- Styles -->
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -45,6 +50,8 @@
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="https://www.greatinsight.com">Insight Technologies</a></li>
+                            <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -52,6 +59,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
+                                    <li><a href="https://www.greatinsight.com">Insight Technologies</a></li>
+                                    <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -70,7 +79,6 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
 
