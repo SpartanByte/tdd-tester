@@ -15,6 +15,7 @@ class LinkController extends Controller
     public function index()
     {
         $links = Link::all();
+
         return view('wiki.index')->with(compact('links'));
     }
 
@@ -43,7 +44,8 @@ class LinkController extends Controller
             'description' => $request->linktext
         ]);
 
-        return view('wiki.index');
+        $links = Link::all();
+        return view('wiki.index')->with(compact('links'));
 
     }
 
