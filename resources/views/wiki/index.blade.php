@@ -48,6 +48,7 @@
                         <td>{{$link->url}}</td>
                         <td>{{$link->alt_text}}</td>
                         <td>{{$link->description}}</td>
+                        <td>{{$link->id }}</td>
                     </tr>
                     @endforeach
                 </tbody>

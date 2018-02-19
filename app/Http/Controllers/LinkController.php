@@ -57,7 +57,7 @@ class LinkController extends Controller
      */
     public function show(Link $link)
     {
-
+        $link = Link::find($link); // make sure you get the ID
     }
 
     /**
@@ -91,6 +91,6 @@ class LinkController extends Controller
      */
     public function destroy(Link $link)
     {
-        //
+
     }
 }
