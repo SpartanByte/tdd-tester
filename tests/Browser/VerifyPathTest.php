@@ -12,12 +12,12 @@ class VerifyPathTest extends DuskTestCase
 {
 
     /** @test */
-    // public function click_link_and_see_message(){
-    //     $this->browse(function(Browser $browser){
-    //         $browser->visit('/')
-    //             ->press("Press")
-    //             ->assertPathIs('/testpage')
-    //             ->assertSee("You have reached the test page!");
-    //     });
-    // }
+    public function click_link_and_see_message(){
+        $this->browse(function(Browser $browser){
+            $browser->visit('/')
+                ->press("Press")
+                ->assertPathIs('/testpage')
+                ->assertSee("You have reached the test page!");
+        });
+    }
 }

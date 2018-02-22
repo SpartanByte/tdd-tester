@@ -104,7 +104,7 @@
                     <a href="{{ route('wiki.index') }}"><button class="btn btn-primary my-primary">Wiki Home</button></a>
                     <button onClick="clickMessage()" class="btn btn-primary my-primary">Click for Test Message</button>
                     {{-- <button onClick="toggleMessage()" id="toggler" class="btn btn-primary my-primary">Click To Toggle</button> --}}
-                    <a href="/testpage"><button class="btn btn-primary my-primary">Press</button></a>
+                    <a href="/testpage"><button name="Press" class="btn btn-primary my-primary">Press</button></a>
                     <p id="toggleP" class="msgToggle">This paragraph is toggling</p>
                 </div>
             </div>
