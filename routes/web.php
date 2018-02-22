@@ -29,5 +29,5 @@ Route::prefix('wiki')->name('wiki.')->group(function(){
 });
 
 Route::get('home', function(){
-    return redirect('wikihome');
+    return redirect('/');
 });

@@ -36,19 +36,22 @@
         </div>
         <div>
             @if($links != null)
-            <table>
-                <theader>
-                    <th>URL</th>
-                    <th>Alt</th>
-                    <th>Link Text</th>
-                </theader>
+            <table class="col-md-12">
+                <thead>
+                    <th class="col-md-1 no-pad">ID</th>
+                    <th class="col-md-3 no-pad">URL</th>
+                    <th class="col-md-3 no-pad">Alt</th>
+                    <th class="col-md-3 no-pad">Link Text</th>
+                    <th class="col-md-3 no-pad">Added By</th>
+                </thead>
                 <tbody>
                     @foreach($links as $link)
                     <tr>
-                        <td>{{$link->url}}</td>
+                        <td>{{$link->id }}</td>
+                        <td><a href="{{$link->url}}" target="_blank">{{$link->url}}</a></td>
                         <td>{{$link->alt_text}}</td>
                         <td>{{$link->description}}</td>
-                        <td>{{$link->id }}</td>
+                        <td>Mister Tester</td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -6,6 +6,7 @@ use Tests\TestCase;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use App\Models\Link;
 
 class ExampleTest extends DuskTestCase
 {
@@ -23,14 +24,18 @@ class ExampleTest extends DuskTestCase
     }
 
     /** @test */
-    public function click_login(){
-        $this->browse(function(Browser $browser){
-            $browser->visit('/login')
-                ->clickLink("Register")
-                ->assertPathIs('/register');
+    public function user_can_click_link(){
 
-            $registerValue = $browser->text('.dusk-test');
-            var_dump($registerValue);
+        $link = factory(Link::class)->create([
+            'url' => 'http://brianwardwell.com',
+            'alt_text' => 'brianwardwell.com',
+            'description' => 'Brian Wardwell',
+        ]);
+
+        $this->browse(function(Browser $browser){
+            $browser->visit('wiki')
+                ->clickLink('http://brianwardwell.com')
+                ->assertSee('Brian Wardwell');
         });
     }
 }

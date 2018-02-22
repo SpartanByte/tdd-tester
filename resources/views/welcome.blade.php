@@ -10,6 +10,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
         <!-- Styles -->
         <style>
@@ -67,11 +68,17 @@
                 font-weight:bold;
                 text-transform:uppercase;
             }
+            .msgToggle{
+                display:none;
+            }
         </style>
         <script>
             function clickMessage(){
                 var message="Test Message Recieved";
                 document.getElementById("fillThis").value = message;
+            }
+            function toggleMessage(){
+                $("#toggleP").toggleClass('msgToggle');
             }
         </script>
     </head>
@@ -92,13 +99,13 @@
                 <div class="title m-b-md" style="color:#252525;">
                     Test Wiki: TDD Application
                 </div>
-                <div><input type="text" id="fillThis" name="fillThis" style="border:none;font-size:20px;"/></div>
+                <div><strong><input type="text" id="fillThis" name="fillThis" style="border:none;font-size:20px;"/></strong></div>
                 <div class="links">
                     <a href="{{ route('wiki.index') }}"><button class="btn btn-primary my-primary">Wiki Home</button></a>
-                    <a href="https://phpunit.de/documentation.html"><button class="btn btn-primary my-primary">PHP Unit Documentation</button></a>
-                    <a href="https://laravel.com/docs/5.5/testing"><button class="btn btn-primary my-primary">Laravel Application Testing</button></a>
                     <button onClick="clickMessage()" class="btn btn-primary my-primary">Click for Test Message</button>
+                    {{-- <button onClick="toggleMessage()" id="toggler" class="btn btn-primary my-primary">Click To Toggle</button> --}}
                     <a href="/testpage"><button class="btn btn-primary my-primary">Press</button></a>
+                    <p id="toggleP" class="msgToggle">This paragraph is toggling</p>
                 </div>
             </div>
         </div>
